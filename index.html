@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .header div {
+            margin: 0 20px;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: 1px solid red;
+            border-radius: 5px;
+            color: red;
+            cursor: pointer;
+        }
+        .content {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div onclick="showStudyNotes()">Study Notes</div>
+        <div onclick="showQA()">QA</div>
+        <div onclick="showMCQ()">MCQ</div>
+    </div>
+
+    <div class="content" id="content">
+        <p>Select a section above to start exploring.</p>
+    </div>
+
+    <script>
+        function showStudyNotes() {
+            document.getElementById("content").innerHTML = `
+                <h2>What is Electric Charge?</h2>
+                <p>Electric charge is a property of certain subatomic particles, such as electrons and protons, that causes them to experience a force when near other charged particles. It is the basis for electromagnetic interactions, one of the four fundamental forces in nature. Electric charges can be positive or negative, and like charges repel each other while opposite charges attract.</p>
+                
+                <h3>Everyday Examples of Electric Charges</h3>
+                <p>Electric charges are observable in everyday life. For instance:</p>
+                <ul>
+                    <li><strong>Balloon and Hair Interaction:</strong> When a balloon is rubbed against hair, electrons transfer from one object to another, creating a charge imbalance. This makes the balloon cling to the wall due to the electrostatic force.</li>
+                    <li><strong>Comb and Paper:</strong> Similarly, when a dry comb is run through hair, it becomes charged. If brought near small pieces of paper, the comb attracts them due to its newly acquired electric charge.</li>
+                </ul>
+                
+                <h3>Properties of Electric Charge</h3>
+                <ul>
+                    <li><strong>Quantization:</strong> Electric charge is quantized, meaning it exists in discrete amounts rather than a continuous range. The smallest unit of charge is the elementary charge, carried by a single proton or electron.</li>
+                    <li><strong>Conservation:</strong> The total electric charge in an isolated system remains constant. This principle, known as the conservation of charge, is crucial in both macroscopic and microscopic physical processes.</li>
+                    <li><strong>Interaction:</strong> Electric charges exert forces on each other over distances, a concept governed by Coulomb’s law. This law states that the magnitude of the electrostatic force between two point charges is directly proportional to the product of the charges and inversely proportional to the square of the distance between them.</li>
+                </ul>
+
+                <h3>Coulomb’s Law and Electric Fields</h3>
+                <p>Coulomb’s law provides the foundation for understanding how charges interact. It is expressed mathematically as:</p>
+                <p><em>F = (k * |q1 * q2|) / r^2</em></p>
+                <p>where:</p>
+                <ul>
+                    <li><em>F</em> is the force between two charges,</li>
+                    <li><em>q1</em> and <em>q2</em> are the magnitudes of the charges,</li>
+                    <li><em>r</em> is the distance between the charges, and</li>
+                    <li><em>k</em> is Coulomb's constant.</li>
+                </ul>
+
+                <h3>Electric Fields: The Influence of Charges</h3>
+                <p>An electric field is the region around a charged particle where its influence can be felt by other charges. The field strength at any point is the force per unit charge exerted on a positive test charge placed at that point. The concept of the electric field allows physicists to describe how charges affect each other at a distance.</p>
+
+                <h3>Real-world Applications of Electric Charges</h3>
+                <ul>
+                    <li><strong>Electronics:</strong> Electric charges control the flow of current in electronic devices.</li>
+                    <li><strong>Lightning:</strong> The buildup of electric charge in storm clouds leads to lightning, a spectacular natural display of electrostatic discharge.</li>
+                    <li><strong>Healthcare:</strong> Electrostatic principles are employed in medical devices such as defibrillators and in imaging technologies like X-rays.</li>
+                </ul>
+            `;
+        }
+
+        function showQA() {
+            document.getElementById("content").innerHTML = `<p>QA content coming soon!</p>`;
+        }
+
+        function showMCQ() {
+            document.getElementById("content").innerHTML = `<p>MCQ content coming soon!</p>`;
+        }
+    </script>
+
+</body>
+</html>
